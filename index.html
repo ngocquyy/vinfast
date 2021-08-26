@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Vinfast</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="shortcut icon" type="image/png" href="./assets/images/logo (1).ico" />
+  <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+</head>
+<body>
+  <app-root></app-root>
+  <script type="text/javascript" src="./assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script type="text/javascript" src="./assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            nav: true,
+            navText: ['<i class="fas fa-chevron-left trai"></i>', '<i class="fas fa-chevron-right phai"></i>'],
+        });
+    });
+    </script>
+    <script type="text/javascript">
+      function filterSelection(evt, optionName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(optionName).style.display = "block";
+          evt.currentTarget.className += " active";
+      }
+  
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+      </script>
+      <script type="text/javascript">
+        function filterSelection(evt, optionName) {
+            var i, tabform, chose;
+            tabform = document.getElementsByClassName("tabform");
+            for (i = 0; i < tabform.length; i++) {
+                tabform[i].style.display = "none";
+            }
+            chose = document.getElementsByClassName("chose");
+            for (i = 0; i < chose.length; i++) {
+                chose[i].className = chose[i].className.replace(" active", "");
+            }
+            document.getElementById(optionName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+</body>
+</html>
